@@ -1,0 +1,14 @@
+@import "./fonts/fonts.scss";
+@import "../styles/vars.scss";
+
+* {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  background-color: $bg-color;
+  font-family: Mplus1p, serif, Arial;
+  color: $primary-font-color;
+  margin: 0;
+}
+  

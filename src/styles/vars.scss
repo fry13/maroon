@@ -1,0 +1,38 @@
+$bg-color: #f8f8f8;
+$accent-bg-color: #F4F1ED;
+$primary-font-color: #122947;
+$secondary-font-color: #9A9DA0;
+$copyright-text-color: #959595;
+$buttons-border-color: #B3BAC1;
+$blocks-border-color: #DBDCE0;
+
+%block-heading {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 32px;
+  margin: 0;
+}
+
+%block-description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+%button {
+  height: 41px;
+  border: 1px solid #B3BAC1;
+  background: 0;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 500;
+  color: $primary-font-color;
+  cursor: pointer;  
+}
+
+%hoverable {
+  transition: opacity .3s ease-in;
+  &:hover {
+    opacity: 0.75;
+  }
+}
