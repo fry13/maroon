@@ -6,20 +6,25 @@ import styles from "./Catalog.module.scss";
 
 type Props = {
   data: Product[];
+  smallSize?: boolean;
 };
 
-const Catalog = ({ data }: Props) => {
+const Catalog = ({ data, smallSize }: Props) => {
+  let productsOnPage: number;
+  if (smallSize) productsOnPage = 4;
+  else productsOnPage = 12;
+
   const [allProducts, setAllProducts] = useState<Product[]>([]);
-  const [sliceParams, setSliceParams] = useState<number[]>([0, 12]);
+  const [sliceParams, setSliceParams] = useState<number[]>([0, productsOnPage]);
   const [disableLeftArrow, setDisableLeftArrow] = useState<boolean>(false);
   const [disableRightArrow, setDisableRightArrow] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState<number>(1);
 
   useEffect(() => {
-    if (sliceParams[0] + 12 > allProducts.length) {
+    if (sliceParams[0] + productsOnPage > allProducts.length) {
       setDisableRightArrow(true);
     } else setDisableRightArrow(false);
-    if (sliceParams[0] - 12 < 0) {
+    if (sliceParams[0] - productsOnPage < 0) {
       setDisableLeftArrow(true);
     } else setDisableLeftArrow(false);
   }, [sliceParams, allProducts]);
@@ -30,14 +35,20 @@ const Catalog = ({ data }: Props) => {
 
   const paginationNext = () => {
     setCurrentPage(currentPage + 1);
-    window.scrollTo(0, 140);
-    setSliceParams([sliceParams[0] + 12, sliceParams[1] + 12]);
+    if (!smallSize) window.scrollTo(0, 140);
+    setSliceParams([
+      sliceParams[0] + productsOnPage,
+      sliceParams[1] + productsOnPage,
+    ]);
   };
 
   const paginationPrev = () => {
     setCurrentPage(currentPage - 1);
-    window.scrollTo(0, 140);
-    setSliceParams([sliceParams[0] - 12, sliceParams[1] - 12]);
+    if (!smallSize) window.scrollTo(0, 140);
+    setSliceParams([
+      sliceParams[0] - productsOnPage,
+      sliceParams[1] - productsOnPage,
+    ]);
   };
 
   return (
@@ -57,7 +68,7 @@ const Catalog = ({ data }: Props) => {
         <div className={styles.digits_container}>
           <p>{currentPage}</p>
           <Image src="/line.svg" width={50} height={1} alt="" />
-          <p>{Math.ceil(allProducts.length / 12)}</p>
+          <p>{Math.ceil(allProducts.length / productsOnPage)}</p>
         </div>
         <div className={styles.arrows_container}>
           <button onClick={paginationPrev} disabled={disableLeftArrow}>

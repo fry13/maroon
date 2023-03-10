@@ -25,7 +25,7 @@ const Header = ({ noBorder }: Props) => {
               <Link href="/catalog">Каталог</Link>
             </li>
             <li>
-              <Link href="#history">О нас</Link>
+              <Link href="?#history">О нас</Link>
             </li>
             <li>
               <Link href="#contacts">Контакты</Link>

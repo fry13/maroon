@@ -5,17 +5,26 @@ import Footer from "@/components/Footer/Footer";
 import { ReactNode } from "react";
 
 type Props = {
-  noHeader?: boolean;
+  mainPage?: boolean;
+  productPage?: boolean;
   children: ReactNode;
 };
 
-const Layout = ({ noHeader, children }: Props) => {
-  if (noHeader)
+const Layout = ({ mainPage, productPage, children }: Props) => {
+  if (mainPage)
     return (
       <>
         {children}
         <Follow />
         <Contacts />
+        <Footer />
+      </>
+    );
+  if (productPage)
+    return (
+      <>
+        <Header />
+        {children}
         <Footer />
       </>
     );
