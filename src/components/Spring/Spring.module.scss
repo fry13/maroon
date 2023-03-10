@@ -15,7 +15,7 @@
     width: 285px;
     left: 275px;
     position: relative;
-    & h2 {
+    & h2 {      
       @extend %block-heading;
     }
     & p {

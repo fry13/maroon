@@ -2,9 +2,7 @@
 
 .recently_viewed {
   & h2 {
-    font-family: Raleway, serif, Arial;
-    font-size: 32px;
-    font-weight: 500;
+    @extend %block-heading;
     text-align: center;
     margin: 0 0 60px 0;
   }
