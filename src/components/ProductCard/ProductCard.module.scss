@@ -1,0 +1,46 @@
+@import "../../styles/vars.scss";
+
+.link {
+  display: block;
+}
+
+.wrapper {
+  width: 270px;
+  height: 350px;
+  position: relative;
+  &:hover div{
+    opacity: .85;
+  }
+}
+.text_container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  padding: 0 20px 18px 20px;
+  bottom: 0;
+  left: 0;
+  transition: opacity .3s ease-in;
+}
+
+.upper_text_wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: $primary-font-color;
+  margin-bottom: 8px;
+}
+
+.bottom_text_wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 13px;
+  color: $secondary-font-color;
+}
+
+.text {
+  margin: 0;
+}
