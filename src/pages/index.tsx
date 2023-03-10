@@ -12,7 +12,7 @@ export default function Home() {
         <title>Maroon</title>
         <meta name="Maroon" content="Maroon cosmetics" />
       </Head>
-      <Layout noHeader>
+      <Layout mainPage>
         <Intro />
         <Spring />
         <Individual />

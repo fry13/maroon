@@ -1,0 +1,154 @@
+@import "../../styles/vars.scss";
+
+.collapsed {
+  height: 38px;
+  overflow: hidden;
+}
+
+.expanded {
+  height: auto;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.displayNone {
+  display: none;
+}
+
+.product {
+  width: 1170px;
+  margin: 40px auto 0 auto;
+  display: flex;
+  align-items: center;
+  & .image {
+    align-self: flex-start;
+    object-fit: cover;
+  }
+}
+
+.text_wrapper {
+  margin: 40px 0 0 40px;
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column;
+  width: 370px;
+  & h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 500;
+  }  
+}
+
+.shortDesc {
+  margin: 8px 0 0 0;
+  color: $secondary-font-color;
+  font-size: 16px;
+}
+
+.longDesc {
+  margin: 30px 0 0 0;
+  line-height: 24px;
+}
+
+.composition {
+  width: 100%;
+  margin: 40px 0 0 0;
+  border-top: 1px solid $buttons-border-color;
+  transition: height .3s ease-in;
+  & div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p:first-of-type {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 15px 0 0 0;
+    }
+    & button {
+      margin-top: 12px;
+      padding: 0;
+      height: 12px;
+      background: 0;
+      border: 0;      
+    }
+  } 
+  & p:last-of-type {
+    font-size: 14px;
+    margin: 15px 0 0 0;
+  }
+}
+
+.application {
+  width: 100%;
+  margin: 18px 0 0 0;
+  border-top: 1px solid $buttons-border-color;
+  border-bottom: 1px solid $buttons-border-color;
+  padding-bottom: 15px;
+  & div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p:first-of-type {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 15px 0 0 0;
+    }    
+  } 
+  & p:last-of-type {
+    font-size: 14px;
+    margin: 15px 0 0 0;
+  }
+}
+
+.expand_wrapper {
+  position: relative;
+}
+
+.expand {
+  position: absolute;
+  top: -10;
+  right: 0;
+  margin-top: 12px;
+  padding: 0;
+  height: 12px;
+  background: 0;
+  border: 0;
+  cursor: pointer;
+  @extend %hoverable;
+}
+
+.volume {
+  display: flex;
+  align-items: center;
+  margin-top: 45px;
+  & p {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+  }
+  & input {
+    margin-left: 15px;
+  }
+  & label {
+    margin-left: 10px;
+  }
+}
+
+.cost_wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 45px;
+  & p {
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0 50px 0 0;
+  }
+  & button {
+    width: 214px;
+    cursor: pointer;
+    @extend %button;
+    @extend %hoverable
+  }
+}
