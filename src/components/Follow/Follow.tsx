@@ -6,37 +6,37 @@ const Follow = () => {
     <section className={styles.follow}>
       <div>
         <Image
-          src="/follow block/1.jpg"
+          src="/follow_block/1.jpg"
           width={233}
           height={233}
           alt=""
         ></Image>
         <Image
-          src="/follow block/2.jpg"
+          src="/follow_block/2.jpg"
           width={233}
           height={233}
           alt=""
         ></Image>
         <Image
-          src="/follow block/3.jpg"
+          src="/follow_block/3.jpg"
           width={233}
           height={233}
           alt=""
         ></Image>
         <Image
-          src="/follow block/4.jpg"
+          src="/follow_block/4.jpg"
           width={233}
           height={233}
           alt=""
         ></Image>
         <Image
-          src="/follow block/5.jpg"
+          src="/follow_block/5.jpg"
           width={233}
           height={233}
           alt=""
         ></Image>
         <Image
-          src="/follow block/6.jpg"
+          src="/follow_block/6.jpg"
           width={233}
           height={233}
           alt=""
