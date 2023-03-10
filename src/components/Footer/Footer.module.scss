@@ -1,0 +1,69 @@
+@import "../../styles/vars.scss";
+
+.top_wrapper{
+  width: 100%;
+  background-color: $accent-bg-color;
+  margin-top: 140px;
+  border-bottom: 1px solid $blocks-border-color;
+  height: 140px;
+  & div {
+    display: flex;
+    align-items: center;
+    width: 1170px;
+    margin: 0 auto;
+    height: 100%;
+  }
+}
+
+.bottom_wrapper{
+  width: 100%;
+  height: 54px;
+  background-color: $accent-bg-color;
+  display: flex;
+  justify-content: space-between;
+  & div:first-of-type {
+    display: flex;
+    align-items: center;
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+    color: $copyright-text-color;
+    font-size: 12px;
+    & img {
+      margin: 0 5px;
+    }
+    & a {
+      text-decoration: none;
+      color: $copyright-text-color;
+      white-space: nowrap;
+      @extend %hoverable
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 69px;
+  & ul {
+    display: flex;
+    padding: 0;
+    & li {
+      list-style: none;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin-right: 40px;  
+      &:last-of-type {
+        margin-right: 0;
+      }    
+      & a {
+        text-decoration: none;
+        color: $primary-font-color;
+        @extend %hoverable
+      }
+    }
+  }
+}

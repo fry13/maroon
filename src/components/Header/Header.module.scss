@@ -1,0 +1,52 @@
+@import "../../styles/vars.scss";
+
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1170px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  & ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    & li {
+      list-style: none;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin-right: 35px;
+      &:last-of-type {
+        margin-right: 51px;
+      }
+      & a {
+        text-decoration: none;
+        color: $primary-font-color;
+        @extend %hoverable;
+      }
+    }
+  }
+}
+
+.icons_wrapper {
+  margin-top: 5px;
+  @extend %hoverable;
+}
+
+.icon:first-of-type {  
+  margin-right: 30px;
+}
+
+.border_bottom {
+  border-bottom: 1px solid $blocks-border-color;
+}

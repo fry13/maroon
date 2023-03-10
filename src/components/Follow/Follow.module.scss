@@ -1,0 +1,34 @@
+@import "../../styles/vars.scss";
+
+.follow {
+  width: 1170px;
+  margin: 0 auto 140px auto;
+  display: flex;
+  & div:first-of-type {
+    min-width: 699px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    & img {
+      display: block;
+    } 
+  }
+  & div:last-of-type {
+    display: flex;
+    margin-left: 71px;
+    flex-direction: column;
+    justify-content: center;
+    & h2 {
+      @extend %block-heading
+    }
+    & p{
+      @extend %block-description;
+      margin: 26px 0 36px 0;
+    }
+    & button {
+      width: 170px;
+      @extend %button;
+      @extend %hoverable;
+    }
+  }
+  
+}

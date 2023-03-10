@@ -1,0 +1,40 @@
+@import "../../styles/vars.scss";
+
+.contacts {
+  width: 1170px;
+  margin: 0 auto;
+  position: relative;  
+}
+
+.contacts_block {
+  width: 470px;
+  padding: 100px;
+  background-color: $accent-bg-color;
+  & h2 {
+    @extend %block-heading
+  }
+  & h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 30px 0 0 0;
+    line-height: 18px;    
+    & :first-of-type {
+      margin-top: 40px;
+    }
+  }
+  & p {
+    @extend %block-description;
+    margin: 12px 0 0 0;
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+  & iframe {
+    width: 670px;
+    height: 422px;
+    border: 0;
+    right:0;
+    top: calc(50% - 211px);
+    position: absolute;
+  }
+}
