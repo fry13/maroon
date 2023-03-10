@@ -1,0 +1,15 @@
+@import "../../styles/vars.scss";
+
+.socials {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  & a {
+    margin-right: 30px;
+    @extend %hoverable;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

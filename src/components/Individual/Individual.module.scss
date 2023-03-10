@@ -1,0 +1,33 @@
+@import "../../styles/vars.scss";
+
+.individual {
+  width: 1170px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 140px;
+}
+
+.left_block {
+  width: 470px;
+  padding: 100px;
+  background-color: $accent-bg-color;
+  & h2 {
+    @extend %block-heading
+  }
+  & p {
+    width: 329px;    
+    margin: 32px 0 0 0;
+    @extend %block-description
+  }
+  & button {
+    width: 200px;
+    margin-top: 37px;
+    @extend %button;
+    @extend %hoverable;
+  }
+  & img {
+    right:0;
+    top: calc(50% - 225px);
+    position: absolute;
+  }
+}

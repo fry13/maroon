@@ -1,0 +1,30 @@
+@import "../../styles/vars.scss";
+
+.spring {
+  width: 100%;
+  height: 400px;
+  background-image: url(/spring-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 140px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & div {
+    width: 285px;
+    left: 275px;
+    position: relative;
+    & h2 {
+      @extend %block-heading;
+    }
+    & p {
+      @extend %block-description;
+    }
+    & button {
+      width: 141px;
+      @extend %button;
+      @extend %hoverable;
+    }
+  }
+}
