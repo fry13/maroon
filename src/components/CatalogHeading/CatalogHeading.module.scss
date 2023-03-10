@@ -1,0 +1,96 @@
+@import "../../styles/vars.scss";
+
+.collapsed {
+  height: 60px;  
+  opacity: 0;  
+}
+
+.expanded {
+  height: 400px;  
+  opacity: 1;  
+}
+
+.displayBlock {
+  display: block;
+}
+
+.displayNone {
+  display: none;
+}
+
+.heading {
+  width: 1170px;
+  margin: 48px auto 0 auto;
+  position: relative;
+  
+  & .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & h1 {
+      font-size: 36px;
+      font-weight: 500;
+      margin: 0;
+    }
+    & button {
+      width: 141px;
+      @extend %button;
+      @extend %hoverable;
+    } 
+    & button:last-of-type{
+      position: absolute;
+      top: 10px;
+      right: 0;
+      border: 0;
+      padding: 0;
+      width: 18px;
+    }
+  }  
+}
+
+.filter_container {
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 0;  
+  background-color: $bg-color;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;  
+  transition: opacity .3s ease-in,  height .3s ease-in;
+  & .filter_col {
+    display: flex;
+    flex-direction: column;
+    & p {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 31px;
+    }
+    & ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;  
+      & li {
+        margin-bottom: 22px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }  
+}
+
+.buttons_wrapper{    
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 41px;
+  & button {
+    width: 141px;
+    @extend %button;
+    @extend %hoverable;
+    &:first-of-type {
+      margin-right: 20px;
+    }
+  }  
+}  
