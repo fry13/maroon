@@ -2,6 +2,18 @@ import { Product } from "./types";
 
 const data:Product[] = [
   {
+    id: 0,
+    name: 'Rose',
+    image: '/catalog/rose.jpg',
+    type: 'Крем',
+    shortDesc: 'Крем для лица',
+    longDesc: 'Увлажняющий крем идеально подходит для повседневного ухода за молодой кожей. Крем равномерно распределяется        по поверхности благодаря легкой текстуре, обеспечивает глубокое увлажнение, регенерацию клеток. ',
+    composition: 'Aqua, Cyclomethicone, Dicaprylyl Carbonate, Butylene Glycol, Glycerin, Tapioca Starch, Nelumbium Speciosum Flower Extract, Calendula Officinalis Flower Extract, Propylene Glycol, Tocopherol, Glycine Soja Oil, Dimethiconol, Citronellol, Limonene.',
+    application: 'Нанесите крем на очищенную кожу лица легкими массажными круговыми движениями, избегая области вокруг глаз. Подходит для дневного и ночного ухода. ',
+    volume: ['80ml', '30ml'],
+    cost: '656'
+  },
+  {
     id: 1,
     name: 'Rose',
     image: '/catalog/rose.jpg',
@@ -58,7 +70,7 @@ const data:Product[] = [
     longDesc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae reiciendis, distinctio, nisi nostrum eligendi laboriosam tempore facilis voluptates nesciunt laborum inventore assumenda fugit magnam architecto?',
     composition: 'Aqua, Nelumbium Speciosum Flower Extract, Calendula Officinalis Flower Extract, Propylene Glycol, Tocopherol, Glycine Soja Oil, Dimethiconol, Citronellol, Limonene.',
     application: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, incidunt quasi! Tenetur expedita minima fuga.',
-    volume: ['50ml'],
+    volume: ['50ml', '66ml'],
     cost: '777'
   },
   {
