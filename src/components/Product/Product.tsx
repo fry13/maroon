@@ -13,32 +13,6 @@ type Props = {
 const Product = ({ product }: Props) => {
   const [compositionState, setCompositionState] = useState<boolean>(false);
   const [applicationState, setApplicationState] = useState<boolean>(false);
-  let compositionStyle: string;
-  let applicationStyle: string;
-  let compositionButtonPlusStyle: string;
-  let compositionButtonMinusStyle: string;
-  let applicationButtonPlusStyle: string;
-  let applicationButtonMinusStyle: string;
-
-  if (compositionState) {
-    compositionStyle = `${styles.composition} ${styles.expanded}`;
-    compositionButtonPlusStyle = `${styles.expand} ${styles.displayNone}`;
-    compositionButtonMinusStyle = `${styles.expand} ${styles.displayBlock}`;
-  } else {
-    compositionStyle = `${styles.composition} ${styles.collapsed}`;
-    compositionButtonPlusStyle = `${styles.expand} ${styles.displayBlock}`;
-    compositionButtonMinusStyle = `${styles.expand} ${styles.displayNone}`;
-  }
-
-  if (applicationState) {
-    applicationStyle = `${styles.application} ${styles.expanded}`;
-    applicationButtonPlusStyle = `${styles.expand} ${styles.displayNone}`;
-    applicationButtonMinusStyle = `${styles.expand} ${styles.displayBlock}`;
-  } else {
-    applicationStyle = `${styles.application} ${styles.collapsed}`;
-    applicationButtonPlusStyle = `${styles.expand} ${styles.displayBlock}`;
-    applicationButtonMinusStyle = `${styles.expand} ${styles.displayNone}`;
-  }
 
   return (
     <>
@@ -54,12 +28,18 @@ const Product = ({ product }: Props) => {
           <h1>{product.name}</h1>
           <p className={styles.shortDesc}>{product.shortDesc}</p>
           <p className={styles.longDesc}>{product.longDesc}</p>
-          <div className={compositionStyle}>
+          <div
+            className={`${styles.composition} ${
+              compositionState ? styles.expanded : styles.collapsed
+            }`}
+          >
             <div>
               <p>Состав</p>
               <div className={styles.expand_wrapper}>
                 <button
-                  className={compositionButtonPlusStyle}
+                  className={`${styles.expand} ${
+                    compositionState ? styles.displayNone : styles.displayBlock
+                  }`}
                   onClick={() => setCompositionState(true)}
                 >
                   <Image
@@ -70,7 +50,9 @@ const Product = ({ product }: Props) => {
                   />
                 </button>
                 <button
-                  className={compositionButtonMinusStyle}
+                  className={`${styles.expand} ${
+                    compositionState ? styles.displayBlock : styles.displayNone
+                  }`}
                   onClick={() => setCompositionState(false)}
                 >
                   <Image
@@ -84,12 +66,18 @@ const Product = ({ product }: Props) => {
             </div>
             <p>{product.composition}</p>
           </div>
-          <div className={applicationStyle}>
+          <div
+            className={`${styles.application} ${
+              applicationState ? styles.expanded : styles.collapsed
+            }`}
+          >
             <div>
               <p>Способ применения</p>
               <div className={styles.expand_wrapper}>
                 <button
-                  className={applicationButtonPlusStyle}
+                  className={`${styles.expand} ${
+                    applicationState ? styles.displayNone : styles.displayBlock
+                  }`}
                   onClick={() => setApplicationState(true)}
                 >
                   <Image
@@ -100,7 +88,9 @@ const Product = ({ product }: Props) => {
                   />
                 </button>
                 <button
-                  className={applicationButtonMinusStyle}
+                  className={`${styles.expand} ${
+                    applicationState ? styles.displayBlock : styles.displayNone
+                  }`}
                   onClick={() => setApplicationState(false)}
                 >
                   <Image
