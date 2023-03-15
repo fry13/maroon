@@ -11,7 +11,12 @@ const ProductCard = ({ product }: Props) => {
   return (
     <Link className={styles.link} href={`/catalog/${product.id}`}>
       <div className={styles.wrapper}>
-        <Image src={product.image} width={270} height={350} alt="" />
+        <Image
+          src={product.image}
+          width={270}
+          height={350}
+          alt=""
+        />
         <div className={styles.text_container}>
           <div className={styles.upper_text_wrapper}>
             <p className={styles.text}>{product.name}</p>

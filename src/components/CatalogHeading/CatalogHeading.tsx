@@ -2,6 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import styles from "./CatalogHeading.module.scss";
 import { forFace, forBody, skinType } from "@/filters";
+import Checkbox from "../Checkbox/Checkbox";
 
 const CatalogHeading = () => {
   const [filterState, setFilterState] = useState<boolean>(false);
@@ -43,15 +44,7 @@ const CatalogHeading = () => {
             {forFace.map((item) => {
               return (
                 <li key={item.id}>
-                  <label className={styles.input_wrapper} htmlFor={item.id}>
-                    <input
-                      className={styles.input}
-                      id={item.id}
-                      type="checkbox"
-                    />
-                    <span className={styles.checkmark}></span>
-                    {item.name}
-                  </label>
+                  <Checkbox id={item.id} name={item.name} />
                 </li>
               );
             })}
@@ -63,15 +56,7 @@ const CatalogHeading = () => {
             {forBody.map((item) => {
               return (
                 <li key={item.id}>
-                  <label className={styles.input_wrapper} htmlFor={item.id}>
-                    <input
-                      className={styles.input}
-                      id={item.id}
-                      type="checkbox"
-                    />
-                    <span className={styles.checkmark}></span>
-                    {item.name}
-                  </label>
+                  <Checkbox id={item.id} name={item.name} />
                 </li>
               );
             })}
@@ -83,15 +68,7 @@ const CatalogHeading = () => {
             {skinType.map((item) => {
               return (
                 <li key={item.id}>
-                  <label className={styles.input_wrapper} htmlFor={item.id}>
-                    <input
-                      className={styles.input}
-                      id={item.id}
-                      type="checkbox"
-                    />
-                    <span className={styles.checkmark}></span>
-                    {item.name}
-                  </label>
+                  <Checkbox id={item.id} name={item.name} />
                 </li>
               );
             })}

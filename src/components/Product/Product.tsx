@@ -4,6 +4,7 @@ import { Product } from "@/types";
 import { useEffect, useState } from "react";
 import data from "@/data";
 import ForYou from "../ForYou/ForYou";
+import Checkbox from "../Checkbox/Checkbox";
 
 type Props = {
   product: Product;
@@ -118,8 +119,7 @@ const Product = ({ product }: Props) => {
             {product.volume.map((item: string) => {
               return (
                 <div key={item}>
-                  <input id={item} type="checkbox" />
-                  <label htmlFor={item}>{item}</label>
+                  <Checkbox id={item} name={item} />
                 </div>
               );
             })}
