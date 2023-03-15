@@ -10,7 +10,7 @@ const RecentlyViewed = ({ data }: Props) => {
   return (
     <article className={styles.recently_viewed}>
       <h2>Вы недавно смотрели</h2>
-      <Catalog smallSize data={data} />
+      <Catalog size={4} data={data} />
     </article>
   );
 };

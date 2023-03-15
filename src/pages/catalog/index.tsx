@@ -8,7 +8,7 @@ const catalog = () => {
   return (
     <Layout>
       <CatalogHeading />
-      <Catalog data={data} />
+      <Catalog size={12} data={data} />
       <RecentlyViewed data={data} />
     </Layout>
   );

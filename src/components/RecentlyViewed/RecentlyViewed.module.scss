@@ -1,6 +1,7 @@
 @import "../../styles/vars.scss";
 
 .recently_viewed {
+  margin-bottom: 140px;
   & h2 {
     @extend %block-heading;
     text-align: center;

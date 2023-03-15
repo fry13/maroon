@@ -4,6 +4,7 @@ import Individual from "@/components/Individual/Individual";
 import Spring from "@/components/Spring/Spring";
 import Intro from "@/components/Intro/Intro";
 import Layout from "@/components/Layout/Layout";
+import Bestsellers from "@/components/Bestsellers/Bestsellers";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       </Head>
       <Layout mainPage>
         <Intro />
+        <Bestsellers />
         <Spring />
         <Individual />
         <History />

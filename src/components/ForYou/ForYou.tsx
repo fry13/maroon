@@ -10,7 +10,7 @@ const ForYou = ({ data }: Props) => {
   return (
     <article className={styles.for_you}>
       <h2>Вам также может понравиться</h2>
-      <Catalog smallSize data={data} />
+      <Catalog size={4} data={data} />
     </article>
   );
 };
