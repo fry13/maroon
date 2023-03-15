@@ -1,7 +1,7 @@
 @import "../../styles/vars.scss";
 
 .individual {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
   position: relative;
   margin-bottom: 140px;
@@ -27,7 +27,32 @@
   }
   & img {
     right:0;
-    top: calc(50% - 225px);
+    top: 50%;
+    transform: translateY(-50%);  
+    object-fit: cover;
     position: absolute;
+  }
+}
+
+@media (max-width:1169px) {
+  .individual {
+    width: calc(100% - 90px);
+  }
+  .left_block{
+    padding: 60px;
+    width: 550px;
+    & img {
+      right: auto;
+      left: 442px;
+      width: 398px;
+      height: 403px;
+      overflow: hidden;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .individual {
+    margin-bottom: 120px;
   }
 }

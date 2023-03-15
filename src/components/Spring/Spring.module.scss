@@ -28,3 +28,16 @@
     }
   }
 }
+
+@media (max-width: 1169px) {
+  .spring {
+    width: calc(100% - 85px);
+    padding: 0 85px 0 0;
+    height: 432px;
+    justify-content: flex-end;
+    & div {
+      position: unset;
+      //left: 0;
+    }
+  }
+}

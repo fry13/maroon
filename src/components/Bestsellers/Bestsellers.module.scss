@@ -1,7 +1,7 @@
 @import "../../styles/vars.scss";
 
 .bestsellers {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto; 
   display: flex;
   justify-content: space-between;
@@ -23,5 +23,12 @@
     width: 155px;
     margin-top: 40px;
     @extend %button;
+  }
+}
+
+@media (max-width: 1169px) {
+  .bestsellers {
+    width: calc(100% - 90px);
+    padding: 0 45px;
   }
 }

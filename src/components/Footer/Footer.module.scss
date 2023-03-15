@@ -9,7 +9,7 @@
   & div {
     display: flex;
     align-items: center;
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
     height: 100%;
   }
@@ -65,5 +65,33 @@
         @extend %hoverable
       }
     }
+  }
+}
+
+@media (max-width: 1169px) {
+  .top_wrapper {
+    width: calc(100% - 90px);
+    padding: 0 45px;    
+  }
+
+  .bottom_wrapper {
+    width: calc(100% - 90px);
+    padding: 0 45px;
+    & div:first-of-type {
+      width: 100%;
+    }
+  }
+  
+  .nav {
+    padding-left: 50px;
+    & ul li {
+      margin-right: 25px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .top_wrapper {
+    margin-top: 120px;
   }
 }

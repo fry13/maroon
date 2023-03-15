@@ -12,12 +12,12 @@ const CatalogHeading = () => {
 
   if (filterState) {
     filterStyle = `${styles.filter_container} ${styles.expanded}`;
-    filterButtonStyle = styles.displayNone;
-    crossButtonStyle = styles.displayBlock;
+    filterButtonStyle = styles.display_none;
+    crossButtonStyle = styles.display_block;
   } else {
     filterStyle = `${styles.filter_container} ${styles.collapsed}`;
-    filterButtonStyle = styles.displayBlock;
-    crossButtonStyle = styles.displayNone;
+    filterButtonStyle = styles.display_block;
+    crossButtonStyle = styles.display_none;
   }
 
   return (

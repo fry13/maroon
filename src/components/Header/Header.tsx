@@ -18,6 +18,9 @@ const Header = ({ noBorder }: Props) => {
   return (
     <header className={headerStyle}>
       <div className={styles.header}>
+        <button>
+          <Image src="/burger.svg" width={24} height={12} alt="Меню" />
+        </button>
         <Logo />
         <nav className={styles.nav}>
           <ul className={styles.list}>

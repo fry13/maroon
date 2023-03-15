@@ -10,7 +10,7 @@ const Intro = () => {
       <div className={styles.wrapper}>
         <div className={styles.card}>
           <Link href="/catalog">
-            <Image src="/intro1.jpg" width={330} height={422} alt="" />
+            <Image className={styles.card_image} src="/intro1.jpg" width={330} height={422} alt="" />
           </Link>
           <div>
             <Link href="/catalog">Уход для лица</Link>
@@ -29,7 +29,7 @@ const Intro = () => {
         </div>
         <div className={styles.card}>
           <Link href="/catalog">
-            <Image src="/intro2.jpg" width={330} height={422} alt="" />
+            <Image className={styles.card_image} src="/intro2.jpg" width={330} height={422} alt="" />
           </Link>
           <div>
             <Link href="/catalog">Уход для тела</Link>

@@ -26,3 +26,10 @@
     @extend %hoverable;
   }
 }
+
+@media (max-width:768px) {
+  .history {
+    height: 393px;
+    margin-bottom: 12px;
+  }
+}

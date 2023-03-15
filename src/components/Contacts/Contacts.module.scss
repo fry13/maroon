@@ -1,7 +1,7 @@
 @import "../../styles/vars.scss";
 
 .contacts {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
   position: relative;  
 }
@@ -34,7 +34,23 @@
     height: 422px;
     border: 0;
     right:0;
-    top: calc(50% - 211px);
+    top: 50%;
+    transform: translateY(-50%);
     position: absolute;
+  }
+}
+
+@media (max-width:1169px) {
+  .contacts {
+    width: calc(100% - 90px);
+  }
+  .contacts_block{
+    padding: 60px;
+    width: 550px;   
+    & iframe {      
+      width: 396px;
+      height: 374px;
+      right: -45px;
+    } 
   }
 }

@@ -8,9 +8,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1170px;
+  max-width: 1170px;
   height: 100px;
   margin: 0 auto;
+  & button {
+    display: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
 }
 
 .nav {
@@ -49,4 +55,22 @@
 
 .border_bottom {
   border-bottom: 1px solid $blocks-border-color;
+}
+
+@media (max-width: 1169px) {
+  .header {
+    width: calc(100% - 90px);
+    padding: 0 45px;    
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    & button {
+      display: block;
+    }
+  }
+  .nav ul {
+    display: none;
+  }
 }

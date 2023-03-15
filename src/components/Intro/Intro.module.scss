@@ -6,19 +6,17 @@
   background-image: url(/intro-bg.jpg);
   background-position: center;
   background-size: cover;
-  margin-bottom: 140px;
-   
+  margin-bottom: 140px;   
   }
 
 .wrapper{
     display: flex;
-    width: 1170px;
+    max-width: 1170px;
     margin: 20px auto 0 auto;
     justify-content: space-around;
 }
 
 .card {
-
   & img {
     display: block;
   }
@@ -63,3 +61,37 @@
     @extend %hoverable;
   }
 }
+
+@media (max-width:1169px) {
+  .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}
+
+@media (max-width:768px) {
+  .intro {
+    height: 550px;
+    margin-bottom: 120px;
+  }
+
+  .wrapper {
+    justify-content: space-between;
+    padding: 0 45px;
+  }
+
+  .title {
+    & h1 {
+      margin-top: 20px;
+      font-size: 54px;
+    }
+  }
+
+  .card_image {
+    width: 246px;
+    height: 322px;
+  }  
+}
+
