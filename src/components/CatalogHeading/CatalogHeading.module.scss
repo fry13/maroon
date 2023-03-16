@@ -1,15 +1,15 @@
 @import "../../styles/vars.scss";
 
 .collapsed {
-  height: 60px;  
+  //height: 60px;  
   opacity: 0;
-  z-index: -1;
+  display: none;
 }
 
 .expanded {
-  height: 400px;  
+  //height: 400px;  
+  display: block;
   opacity: 1;
-  z-index: 1;
 }
 
 .display_bock {
@@ -21,7 +21,7 @@
 }
 
 .heading {
-  width: 1170px;
+  max-width: 1170px;
   margin: 48px auto 40px auto;
   position: relative;
   
@@ -51,7 +51,9 @@
 }
 
 .filter_container {
-  position: absolute;  
+  position: absolute; 
+  padding-bottom: 100px;
+  z-index: 1; 
   top: 50px;
   left: 0;  
   background-color: $bg-color;
@@ -62,6 +64,7 @@
   & .filter_col {
     display: flex;
     flex-direction: column;
+    min-width: 130px;
     & p {
       font-size: 18px;
       font-weight: 500;
@@ -81,7 +84,7 @@
   }  
 }
 
-.buttons_wrapper{    
+.desktop_buttons_wrapper{    
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -94,4 +97,44 @@
       margin-right: 20px;
     }
   }  
-}  
+}
+
+.tablet_buttons_wrapper {      
+  display: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 41px;
+  & button {
+    width: 141px;
+    @extend %button;
+    @extend %hoverable;
+    &:first-of-type {
+      margin-right: 20px;
+    }
+  }  
+}
+
+@media (max-width: 1169px) {
+  .heading {
+    width: calc(100% - 90px);
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop_buttons_wrapper {
+    display: none;
+  }
+
+  .tablet_buttons_wrapper {
+    display: flex;
+  }
+
+  .filter_container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .filter_col {
+    margin-right: 60px;    
+  }
+}

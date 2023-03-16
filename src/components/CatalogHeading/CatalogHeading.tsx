@@ -6,38 +6,29 @@ import Checkbox from "../Checkbox/Checkbox";
 
 const CatalogHeading = () => {
   const [filterState, setFilterState] = useState<boolean>(false);
-  let filterStyle: string;
-  let filterButtonStyle: string;
-  let crossButtonStyle: string;
-
-  if (filterState) {
-    filterStyle = `${styles.filter_container} ${styles.expanded}`;
-    filterButtonStyle = styles.display_none;
-    crossButtonStyle = styles.display_block;
-  } else {
-    filterStyle = `${styles.filter_container} ${styles.collapsed}`;
-    filterButtonStyle = styles.display_block;
-    crossButtonStyle = styles.display_none;
-  }
-
+  
   return (
     <section className={styles.heading}>
       <div className={styles.title}>
         <h1>Каталог</h1>
         <button
-          className={filterButtonStyle}
+          className={filterState ? styles.display_none : styles.display_block}
           onClick={() => setFilterState(true)}
         >
           Фильтр
         </button>
         <button
-          className={crossButtonStyle}
+          className={filterState ? styles.display_block : styles.display_none}
           onClick={() => setFilterState(false)}
         >
           <Image src="/cross.svg" width={18} height={18} alt="" />
         </button>
       </div>
-      <form className={filterStyle}>
+      <form
+        className={`${styles.filter_container} ${
+          filterState ? styles.expanded : styles.collapsed
+        }`}
+      >
         <div className={styles.filter_col}>
           <p>Уход для лица</p>
           <ul>
@@ -73,10 +64,14 @@ const CatalogHeading = () => {
               );
             })}
           </ul>
-          <div className={styles.buttons_wrapper}>
+          <div className={styles.desktop_buttons_wrapper}>
             <button onClick={(evt) => evt.preventDefault()}>Применить</button>
             <button onClick={(evt) => evt.preventDefault()}>Сбросить</button>
           </div>
+        </div>
+        <div className={styles.tablet_buttons_wrapper}>
+          <button onClick={(evt) => evt.preventDefault()}>Применить</button>
+          <button onClick={(evt) => evt.preventDefault()}>Сбросить</button>
         </div>
       </form>
     </section>

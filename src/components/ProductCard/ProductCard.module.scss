@@ -8,15 +8,19 @@
   width: 270px;
   height: 350px;
   position: relative;
+  & img {
+    object-fit: cover;
+  }
   &:hover div{
     opacity: .85;
   }
 }
+
 .text_container {
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 230px;
+  width: calc(100% - 40px);
   padding: 0 20px 18px 20px;
   bottom: 0;
   left: 0;
@@ -44,3 +48,19 @@
 .text {
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 324px;
+    height: 350px;
+    & img {
+      width: 324px;
+      height: 350px;
+    }
+  }
+
+  .text_container {
+    width: calc(100% - 40px);
+  }
+}
+
