@@ -1,17 +1,5 @@
 @import "../../styles/vars.scss";
 
-.collapsed {
-  //height: 60px;  
-  opacity: 0;
-  display: none;
-}
-
-.expanded {
-  //height: 400px;  
-  display: block;
-  opacity: 1;
-}
-
 .display_bock {
   display: block;
 }
@@ -52,13 +40,13 @@
 
 .filter_container {
   position: absolute; 
-  padding-bottom: 100px;
+  padding-bottom: 80px;
   z-index: 1; 
   top: 50px;
   left: 0;  
   background-color: $bg-color;
   width: 100%;
-  display: flex;
+  //display: flex;
   justify-content: space-evenly;  
   transition: opacity .3s ease-in,  height .3s ease-in;
   & .filter_col {
@@ -84,6 +72,18 @@
   }  
 }
 
+.collapsed {
+  //height: 60px;  
+  //opacity: 0;
+  display: none;
+}
+
+.expanded {
+  //height: auto;  
+  display: flex;
+  //opacity: 1;  
+}
+
 .desktop_buttons_wrapper{    
   display: flex;
   flex-direction: row;
@@ -103,7 +103,7 @@
   display: none;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin-top: 41px;
+  margin: 41px auto 0 auto;
   & button {
     width: 141px;
     @extend %button;

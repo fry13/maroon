@@ -8,19 +8,11 @@ type Props = {
 };
 
 const Header = ({ noBorder }: Props) => {
-  let headerStyle: string;
-  if (noBorder) {
-    headerStyle = `${styles.wrapper}`;
-  } else {
-    headerStyle = `${styles.border_bottom} ${styles.wrapper}`;
-  }
-
   return (
-    <header className={headerStyle}>
+    <header
+      className={`${styles.wrapper} ${noBorder ? null : styles.border_bottom}`}
+    >
       <div className={styles.header}>
-        <button>
-          <Image src="/burger.svg" width={24} height={12} alt="Меню" />
-        </button>
         <Logo />
         <nav className={styles.nav}>
           <ul className={styles.list}>
