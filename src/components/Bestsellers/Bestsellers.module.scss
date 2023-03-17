@@ -28,7 +28,8 @@
 
 @media (max-width: 1169px) {
   .bestsellers {
-    width: calc(100% - 90px);
-    padding: 0 45px;
+    display: none;
+    //width: calc(100% - 90px);
+    //padding: 0 45px;
   }
 }
