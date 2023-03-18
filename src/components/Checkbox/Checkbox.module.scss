@@ -3,6 +3,7 @@
 .input_wrapper {
   display: flex;
   align-items: center;
+  font-size: 18px;
   @extend %hoverable;
   & .input:checked ~ .checkmark {
     background-color: $primary-font-color;
@@ -28,4 +29,10 @@
   outline: 1px solid #dcdcdc;
   border: 1px solid $bg-color;
   margin-right: 10px;
+}
+
+@media (max-width: 560px) {
+  .input_wrapper {
+    font-size: 16px;
+  }  
 }
