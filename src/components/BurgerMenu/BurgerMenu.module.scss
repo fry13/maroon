@@ -5,7 +5,6 @@
   position: absolute;
   top: 0;
   width: 100vw;
-  //padding: 0 45px;
   z-index: 2;  
 }
 
@@ -75,9 +74,18 @@
 
   .links {
     padding: 0 0 50px 15px;
-    margin-top: 77px;
-    & li:last-of-type {
-      margin-bottom: 50px;
+    margin-top: 77px;    
+    & ul {
+      & li {     
+        margin-bottom: 28px;
+        &:last-of-type {
+          margin-bottom: 50px;
+        }
+        & a {          
+          font-size: 28px;
+          line-height: 28px;            
+        }
+      }
     }
   }
 }
