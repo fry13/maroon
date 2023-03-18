@@ -6,19 +6,22 @@ import Checkbox from "../Checkbox/Checkbox";
 
 const CatalogHeading = () => {
   const [filterState, setFilterState] = useState<boolean>(false);
-  
+  const [faceCategoryState, setFaceCategoryState] = useState<boolean>(false);
+  const [skinCategoryState, setSkinCategoryState] = useState<boolean>(false);
+  const [skinTypeState, setSkinTypeState] = useState<boolean>(false);
+
   return (
     <section className={styles.heading}>
       <div className={styles.title}>
         <h1>Каталог</h1>
         <button
-          className={filterState ? styles.display_none : styles.display_block}
+          className={filterState ? styles.filter_display_none : styles.filter_display_block}
           onClick={() => setFilterState(true)}
         >
           Фильтр
         </button>
         <button
-          className={filterState ? styles.display_block : styles.display_none}
+          className={filterState ? styles.filter_display_block : styles.filter_display_none}
           onClick={() => setFilterState(false)}
         >
           <Image src="/cross.svg" width={18} height={18} alt="" />
@@ -30,8 +33,33 @@ const CatalogHeading = () => {
         }`}
       >
         <div className={styles.filter_col}>
-          <p>Уход для лица</p>
-          <ul>
+          <div className={styles.category_title}>
+            <p>Уход для лица</p>
+            <button
+              type="button"
+              className={`${styles.expand} ${
+                faceCategoryState ? styles.display_none : styles.display_block
+              }`}
+              onClick={() => setFaceCategoryState(true)}
+            >
+              <Image src="/plus.svg" width={12} height={12} alt="Развернуть" />
+            </button>
+            <button
+              type="button"
+              className={`${styles.expand} ${
+                faceCategoryState ? styles.display_block : styles.display_none
+              }`}
+              onClick={() => setFaceCategoryState(false)}
+            >
+              <Image src="/minus.svg" width={12} height={12} alt="Свернуть" />
+            </button>
+          </div>
+
+          <ul
+            className={
+              faceCategoryState ? styles.display_block : styles.display_none
+            }
+          >
             {forFace.map((item) => {
               return (
                 <li key={item.id}>
@@ -42,8 +70,32 @@ const CatalogHeading = () => {
           </ul>
         </div>
         <div className={styles.filter_col}>
-          <p>Уход для тела</p>
-          <ul>
+          <div className={styles.category_title}>
+            <p>Уход для тела</p>
+            <button
+              type="button"
+              className={`${styles.expand} ${
+                skinCategoryState ? styles.display_none : styles.display_block
+              }`}
+              onClick={() => setSkinCategoryState(true)}
+            >
+              <Image src="/plus.svg" width={12} height={12} alt="Развернуть" />
+            </button>
+            <button
+              type="button"
+              className={`${styles.expand} ${
+                skinCategoryState ? styles.display_block : styles.display_none
+              }`}
+              onClick={() => setSkinCategoryState(false)}
+            >
+              <Image src="/minus.svg" width={12} height={12} alt="Свернуть" />
+            </button>
+          </div>
+          <ul
+            className={
+              skinCategoryState ? styles.display_block : styles.display_none
+            }
+          >
             {forBody.map((item) => {
               return (
                 <li key={item.id}>
@@ -54,8 +106,32 @@ const CatalogHeading = () => {
           </ul>
         </div>
         <div className={styles.filter_col}>
-          <p>Тип кожи</p>
-          <ul>
+          <div className={styles.category_title}>
+            <p>Тип кожи</p>
+            <button
+              type="button"
+              className={`${styles.expand} ${
+                skinTypeState ? styles.display_none : styles.display_block
+              }`}
+              onClick={() => setSkinTypeState(true)}
+            >
+              <Image src="/plus.svg" width={12} height={12} alt="Развернуть" />
+            </button>
+            <button
+              type="button"
+              className={`${styles.expand} ${
+                skinTypeState ? styles.display_block : styles.display_none
+              }`}
+              onClick={() => setSkinTypeState(false)}
+            >
+              <Image src="/minus.svg" width={12} height={12} alt="Свернуть" />
+            </button>
+          </div>
+          <ul
+            className={
+              skinTypeState ? styles.display_block : styles.display_none
+            }
+          >
             {skinType.map((item) => {
               return (
                 <li key={item.id}>

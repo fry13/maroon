@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./Product.module.scss";
 import { Product } from "@/types";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import data from "@/data";
 import ForYou from "../ForYou/ForYou";
 import Checkbox from "../Checkbox/Checkbox";
@@ -38,7 +38,7 @@ const Product = ({ product }: Props) => {
               <div className={styles.expand_wrapper}>
                 <button
                   className={`${styles.expand} ${
-                    compositionState ? styles.displayNone : styles.displayBlock
+                    compositionState ? styles.display_none : styles.display_block
                   }`}
                   onClick={() => setCompositionState(true)}
                 >
@@ -51,7 +51,7 @@ const Product = ({ product }: Props) => {
                 </button>
                 <button
                   className={`${styles.expand} ${
-                    compositionState ? styles.displayBlock : styles.displayNone
+                    compositionState ? styles.display_block : styles.display_none
                   }`}
                   onClick={() => setCompositionState(false)}
                 >

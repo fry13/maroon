@@ -1,10 +1,10 @@
 @import "../../styles/vars.scss";
 
-.display_bock {
+.filter_display_block {
   display: block;
 }
 
-.display_none {
+.filter_display_none {
   display: none;
 }
 
@@ -46,7 +46,6 @@
   left: 0;  
   background-color: $bg-color;
   width: 100%;
-  //display: flex;
   justify-content: space-evenly;  
   transition: opacity .3s ease-in,  height .3s ease-in;
   & .filter_col {
@@ -70,6 +69,25 @@
       }     
     }
   }  
+}
+
+
+
+.category_title {
+  position: relative;
+}
+
+.expand {
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  padding: 0;
+  height: 12px;
+  background: 0;
+  border: 0;
+  cursor: pointer;
+  @extend %hoverable;
 }
 
 .collapsed {
@@ -114,6 +132,7 @@
   }  
 }
 
+
 @media (max-width: 1169px) {
   .heading {
     width: calc(100% - 90px);
@@ -138,3 +157,65 @@
     margin-right: 60px;    
   }
 }
+
+@media (max-width: 560px) {
+  .heading {
+    width: calc(100% - 30px);
+    margin: 30px 15px 40px 15px;
+    & .title{
+      & h1 {
+        font-size: 28px;
+      }
+      & button {
+        width: 108px;
+      }
+    }
+  }
+  
+  .filter_container {
+    flex-direction: column;
+    & .filter_col {
+      margin: 0;
+      padding: 0 20px;
+      &:first-of-type {
+        margin-top: 50px;
+      }
+      & ul {
+        margin-bottom: 40px;        
+      }
+      & p {
+        margin: 0 0 20px 0;
+      }
+      .category_title {    
+        border-bottom: 1px solid $buttons-border-color;
+        margin: 0 auto 20px auto;
+        width: calc(100%);   
+        &:nth-last-of-type(2n) {
+          border: 0;
+        }
+      }
+      
+    }
+  }
+
+  .tablet_buttons_wrapper {
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    & button {
+      width: 115px;
+    }
+  }
+
+  .expand {
+    display: block;
+  } 
+
+  .display_block {
+    display: block;
+  }
+  
+  .display_none {
+    display: none;
+  }
+}
+

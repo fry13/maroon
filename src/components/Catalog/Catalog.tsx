@@ -1,5 +1,5 @@
 import { Product } from "@/types";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import ProductCard from "../ProductCard/ProductCard";
 import styles from "./Catalog.module.scss";
@@ -10,7 +10,6 @@ type Props = {
 };
 
 const Catalog = ({ data, size }: Props) => {
-
   const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [sliceParams, setSliceParams] = useState<number[]>([0, size]);
   const [disableLeftArrow, setDisableLeftArrow] = useState<boolean>(false);
@@ -24,28 +23,22 @@ const Catalog = ({ data, size }: Props) => {
     if (sliceParams[0] - size < 0) {
       setDisableLeftArrow(true);
     } else setDisableLeftArrow(false);
-  }, [sliceParams, allProducts]);
+  }, [sliceParams, allProducts, size]);
 
   useEffect(() => {
     setAllProducts(data);
-  }, [allProducts, data]);
+  }, [allProducts, data, sliceParams]);
 
   const paginationNext = () => {
     setCurrentPage(currentPage + 1);
     if (size === 12) window.scrollTo(0, 140);
-    setSliceParams([
-      sliceParams[0] + size,
-      sliceParams[1] + size,
-    ]);
+    setSliceParams([sliceParams[0] + size, sliceParams[1] + size]);
   };
 
   const paginationPrev = () => {
     setCurrentPage(currentPage - 1);
     if (size === 12) window.scrollTo(0, 140);
-    setSliceParams([
-      sliceParams[0] - size,
-      sliceParams[1] - size,
-    ]);
+    setSliceParams([sliceParams[0] - size, sliceParams[1] - size]);
   };
 
   return (
