@@ -59,6 +59,7 @@
 @media (max-width: 560px) {
   .contacts {
     width: calc(100% - 30px);
+    margin-bottom: 340px;
   }
 
   .contacts_block {
@@ -80,7 +81,5 @@
       bottom: 0;
       transform: translateY(100%);
     }
-  }
-
-  
+  }  
 }
