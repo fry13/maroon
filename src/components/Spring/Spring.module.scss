@@ -41,3 +41,25 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .spring {    
+    margin-bottom: 120px;
+  }
+}
+
+@media (max-width: 560px) {
+  .spring {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 562px;
+    justify-content: center;
+    background-image: url(/spring-bg-phone.jpg);
+    margin-bottom: 80px;
+    align-items: end;
+    & div {
+      margin-bottom: 60px;
+    }
+  }
+}

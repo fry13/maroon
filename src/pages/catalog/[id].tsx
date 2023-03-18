@@ -1,11 +1,8 @@
 import Layout from "@/components/Layout/Layout";
 import Product from "@/components/Product/Product";
 import data from "@/data";
+import Head from "next/head";
 import { useEffect, useState } from "react";
-
-type Props = {
-  id: number;
-};
 
 const ProductPage = () => {
   const [product, setProduct] = useState<Product>();
@@ -14,9 +11,15 @@ const ProductPage = () => {
     setProduct(data[id]);
   }, []);
   return (
-    <Layout productPage>
-      <Product product={product || data[0]} />
-    </Layout>
+    <>
+      <Head>
+        <title>Maroon Catalog</title>
+        <meta name="Maroon" content="Maroon cosmetics" />
+      </Head>
+      <Layout productPage>
+        <Product product={product || data[0]} />
+      </Layout>
+    </>
   );
 };
 

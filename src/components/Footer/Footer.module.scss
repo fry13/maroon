@@ -21,9 +21,8 @@
   background-color: $accent-bg-color;
   display: flex;
   justify-content: space-between;
-  & div:first-of-type {
+  & .copyright {
     display: flex;
-    align-items: center;
     width: 1170px;
     height: 100%;
     margin: 0 auto;
@@ -37,7 +36,11 @@
       color: $copyright-text-color;
       white-space: nowrap;
       @extend %hoverable
-    }
+    }    
+  }
+  & div:last-of-type {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -93,5 +96,52 @@
 @media (max-width: 768px) {
   .top_wrapper {
     margin-top: 120px;
+  }
+}
+
+@media (max-width: 560px) {
+  .top_wrapper {
+    margin-top: 340px;
+    width: calc(100% - 30px);
+    padding: 50px 15px;
+    height: auto;
+    & div {
+      flex-direction: column;
+      align-items: start;
+      margin: 0;
+    }
+    & .nav {
+      flex-direction: column;
+      align-items:flex-start;
+      margin: 0;
+      padding: 0;
+      & ul {
+        margin: 30px 0;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px 30px;
+        & li {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .bottom_wrapper {
+    height: 94px;
+    padding: 0 15px;
+    width: calc(100% - 30px);
+    & .copyright {
+      flex-direction: column;
+      justify-content: space-around;  
+      height: 100%;  
+      & p {
+        margin: 0;
+      }
+    }
+    & div:last-of-type {
+      align-items: flex-start;
+    }
   }
 }

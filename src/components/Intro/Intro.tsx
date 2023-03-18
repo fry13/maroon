@@ -8,9 +8,15 @@ const Intro = () => {
     <main className={styles.intro}>
       <Header noBorder />
       <div className={styles.wrapper}>
-        <div className={styles.card}>
+        <div id={styles.firstCard} className={styles.card}>
           <Link href="/catalog">
-            <Image className={styles.card_image} src="/intro1.jpg" width={330} height={422} alt="" />
+            <Image
+              className={styles.card_image}
+              src="/intro1.jpg"
+              width={330}
+              height={422}
+              alt=""
+            />
           </Link>
           <div>
             <Link href="/catalog">Уход для лица</Link>
@@ -19,7 +25,7 @@ const Intro = () => {
             </Link>
           </div>
         </div>
-        <div className={styles.title}>
+        <div id={styles.title} className={styles.title}>
           <h1>MAROON</h1>
           <p>
             Натуральная косметика
@@ -27,9 +33,15 @@ const Intro = () => {
           </p>
           <button>Подробнее</button>
         </div>
-        <div className={styles.card}>
+        <div id={styles.secondCard} className={styles.card}>
           <Link href="/catalog">
-            <Image className={styles.card_image} src="/intro2.jpg" width={330} height={422} alt="" />
+            <Image
+              className={styles.card_image}
+              src="/intro2.jpg"
+              width={330}
+              height={422}
+              alt=""
+            />
           </Link>
           <div>
             <Link href="/catalog">Уход для тела</Link>

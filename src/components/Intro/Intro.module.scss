@@ -95,3 +95,58 @@
   }  
 }
 
+@media (max-width:560px) {
+  .intro {
+    margin-bottom: 80px;
+  }
+
+  .wrapper {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .card {
+    & div {
+      margin-top: 10px;
+    }
+    & a {
+      font-size: 12px;
+    }
+  }
+
+  .card_image {
+    width: 130px;
+    height: auto;
+  }
+
+  #title {
+    position: unset;
+    order:1;
+    transform: none;
+    margin: 0 auto 35px auto;
+    width: 100%;
+    & h1 {
+      font-size: 42px;
+      line-height: 42px;
+    }
+    & p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    & button {
+      width: 132px;
+      margin-top: 30px;
+    }
+  }
+
+  #firstCard {
+    order: 2;
+  }
+
+  #secondCard {
+    order: 3;
+  }
+}
+

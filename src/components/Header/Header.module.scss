@@ -70,3 +70,23 @@
     display: none;
   }
 }
+
+@media (max-width: 560px) {
+  .header {
+    width: calc(50% + 28px);
+    padding: 0 15px;
+    height: 76px;
+  }
+
+  .icons_wrapper {
+    margin-top: 1px;
+    & img:first-of-type {
+      width: 13px;
+      height: 16px;
+    }
+    & img:last-of-type {
+      width: 14px;
+      height: 16px;
+    }
+  }
+}

@@ -5,6 +5,7 @@
   margin: 0 auto;
   position: relative;
   margin-bottom: 140px;
+  overflow: hidden;
 }
 
 .left_block {
@@ -15,9 +16,11 @@
     @extend %block-heading
   }
   & p {
-    width: 329px;    
-    margin: 32px 0 0 0;
-    @extend %block-description
+    width: 329px;
+    @extend %block-description;
+    &:first-of-type {      
+      margin: 32px 0 10px 0;
+    }    
   }
   & button {
     width: 200px;
@@ -36,7 +39,8 @@
 
 @media (max-width:1169px) {
   .individual {
-    width: calc(100% - 90px);
+    //width: calc(100% - 90px);
+    margin-left: 45px;
   }
   .left_block{
     padding: 60px;
@@ -46,13 +50,48 @@
       left: 442px;
       width: 398px;
       height: 403px;
-      overflow: hidden;
     }
   }
 }
 
 @media (max-width: 768px) {
   .individual {
-    margin-bottom: 120px;
+    margin: 0 15px 120px 15px;
+  }
+}
+
+@media (max-width: 560px) {
+  .individual {
+    margin-bottom: 230px;
+    overflow:visible;
+    & p:first-of-type {
+      display: none;
+    }
+  }
+
+  .left_block {
+    width: 100%;
+    padding: 58px 0 0 0;
+    height: calc(442px - 58px);
+    text-align: center;    
+    & p {
+      width: auto;
+      &:last-of-type {
+        margin: 20px 0 0 0;
+      }
+    }
+    & button {
+      margin-top: 30px;
+    }
+    & img {
+      display: block;
+      position: unset;
+      left: auto;
+      top: auto;
+      transform: none;
+      margin: 50px auto 0 auto;
+      width: 250px;
+      height: 252px;
+    }
   }
 }

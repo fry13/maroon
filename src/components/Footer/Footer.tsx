@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.bottom_wrapper}>
-        <div>
+        <div className={styles.copyright}>
           <div>
             <p>Maroon</p>
             <Image
