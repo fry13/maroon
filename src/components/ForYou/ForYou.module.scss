@@ -13,3 +13,13 @@
     margin: 120px 0 60px 0;
   }
 }
+
+@media (max-width: 560px) {
+  .for_you{
+    margin-bottom: 60px;
+    & h2 {
+      margin: 0 auto 40px auto;
+      width: calc(100% - 30px);
+    }
+  }
+}

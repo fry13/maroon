@@ -64,3 +64,15 @@
   }
 }
 
+@media (max-width: 560px) {
+  .wrapper{
+    width: 290px;
+    height: 290px;
+    & img {
+      width: 290px;
+      height: 290px;
+    }
+  }
+  
+}
+
