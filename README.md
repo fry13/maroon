@@ -1,6 +1,6 @@
-# [Интернет магазин косметики Maroon](https://main--venerable-alfajores-342cc8.netlify.app/)
+# [Интернет магазин косметики Maroon](https://maroonshop.netlify.app/)
 
 Свёрстан для практики. Работает на Next.js.
 Есть главная страница, каталог товаров, страница товара.
 Проверен и работает на разрешениях с шириной от 320px до 1920px.
-**[Ссылка на развернутый проект](https://main--venerable-alfajores-342cc8.netlify.app/)**
+**[Ссылка на развернутый проект](https://maroonshop.netlify.app/)**
